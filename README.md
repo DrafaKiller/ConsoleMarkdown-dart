@@ -41,12 +41,12 @@ You can also use the `string.toConsole()` extension method:
 print('Hello, **world**!'.toConsole());
 
 print(
-	'''
-		Hello **World**!
-	__Looks *pretty* easy__
-
-	<console color="red" background="black" bold> Console Markdown </console>
-	'''.toConsole();
+  '''
+    Hello **World**!
+    __Looks *pretty* easy__
+    
+    <console color="red" background="black" bold> Console Markdown </console>
+  '''.toConsole();
 )
 ```
 
