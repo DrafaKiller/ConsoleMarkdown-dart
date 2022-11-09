@@ -2,6 +2,23 @@ import 'package:chalkdart/chalk.dart';
 import 'package:console_markdown/src/colors.dart';
 import 'package:marked/marked.dart';
 
+/// ### Markdown Cheatsheet - Symbols
+/// 
+/// | Symbol | Property         | Example        | Result          |
+/// | ------ | ---------------- | -------------- | --------------- |
+/// | `**`   | bold             | `**text**`     | **text**        |
+/// | `*`    | italic           | `*text*`       | *text*          |
+/// | `__`   | underline        | `__text__`     | <u>text</u>     |
+/// | `~~`   | strikethrough    | `~~text~~`     | ~~text~~        |
+/// | `^`    | superscript      | `^text^`       | <sup>text</sup> |
+/// | `~`    | subscript        | `~text~`       | <sub>text</sub> |
+/// | `___`  | double-underline | `___text___`   |                 |
+/// | `!!`   | blink            | `!!text!!`     |                 |
+/// | `!!!`  | rapid-blink      | `!!!text!!!`   |                 |
+/// | `\|\|` | hidden           | `\|\|text\|\|` |                 |
+/// | `^^`   | inverse          | `^^text^^`     |                 |
+/// | \`     | dim              | \``text`\`     |                 |
+// ignore: non_constant_identifier_names
 final ConsoleMarkdownSymbols = Markdown.map({
   // Formatting
   '[**]': (text, match) => chalk.bold(text),
@@ -19,6 +36,12 @@ final ConsoleMarkdownSymbols = Markdown.map({
   '[~]': (text, match) => chalk.subscript(text),
 });
 
+/// ### Markdown Cheatsheet - Basic
+/// 
+/// | Dynamic Tag      | Property  | Example                      | Description |
+/// | ---------------- | --------- | ---------------------------- | ----------- |
+/// | `<console>`      | console   | `<console color="red" background="#000000" bold>text</console>` | All property names can be used as a tag property. |
+// ignore: non_constant_identifier_names
 final ConsoleMarkdownBasic = Markdown.map({
   '<console color|background | reset|blink|rapid|bold|dim|italic|underline|double-underline|overline|inverse|hidden|superscript|subscript|strikethrough>': (text, match) {
     final properties = match.tagProperties;
@@ -48,6 +71,65 @@ final ConsoleMarkdownBasic = Markdown.map({
   },
 });
 
+/// ### Markdown
+/// 
+/// Apply the markdown to a string using the `ConsoleMarkdown.apply()` method:
+/// 
+/// ```dart
+/// print(ConsoleMarkdown.apply('Hello **World**!'));
+/// ```
+/// 
+/// You can also use the `string.toConsole()` extension method:
+/// 
+/// ```dart
+/// print('Hello, **world**!'.toConsole());
+/// 
+/// print(
+/// 	'''
+/// 		Hello **World**!
+/// 	__Looks *pretty* easy__
+/// 
+/// 	<console color="red" background="black" bold> Console Markdown </console>
+/// 	'''.toConsole();
+/// )
+/// ```
+///
+/// ## Markdown Cheatsheet
+/// ### Symbols
+/// 
+/// | Symbol | Property         | Example        | Result          |
+/// | ------ | ---------------- | -------------- | --------------- |
+/// | `**`   | bold             | `**text**`     | **text**        |
+/// | `*`    | italic           | `*text*`       | *text*          |
+/// | `__`   | underline        | `__text__`     | <u>text</u>     |
+/// | `~~`   | strikethrough    | `~~text~~`     | ~~text~~        |
+/// | `^`    | superscript      | `^text^`       | <sup>text</sup> |
+/// | `~`    | subscript        | `~text~`       | <sub>text</sub> |
+/// | `___`  | double-underline | `___text___`   |                 |
+/// | `!!`   | blink            | `!!text!!`     |                 |
+/// | `!!!`  | rapid-blink      | `!!!text!!!`   |                 |
+/// | `\|\|` | hidden           | `\|\|text\|\|` |                 |
+/// | `^^`   | inverse          | `^^text^^`     |                 |
+/// | \`     | dim              | \``text`\`     |                 |
+/// 
+/// ### Tags
+/// 
+/// | Tag          | Property | Example                     |
+/// | ------------ | -------- | --------------------------- |
+/// | `<reset>`    | reset    | `<reset>text`               |
+/// | `<overline>` | overline | `<overline>text</overline>` |
+/// 
+/// **Note:** All Symbol property names can be used as a tag.
+/// 
+/// ### Dynamic Tags
+/// 
+/// | Dynamic Tag      | Property  | Example                      | Description |
+/// | ---------------- | --------- | ---------------------------- | ----------- |
+/// | `<console>`      | console   | `<console color="red" background="#000000" bold>text</console>` | All property names above can be used as a tag property. |
+/// | `<rgb(r, g, b)>` | rgb       | `<rgb(255, 0, 0)>text</rgb>` | Can be set as a background by adding a `background` property. |
+/// | `<hex([#]...)>`  | hex       | `<hex(#ff0000)>text</hex>`   | Can be set as a background by adding a `background` property. |
+/// | `<#...>`         | short hex | `<#ff0000>text</#>`          | Can be set as a background by adding a `background` property. |
+// ignore: non_constant_identifier_names
 final ConsoleMarkdown = Markdown.map({
   // Tags
   'basic: <reset>': (text, match) => chalk.reset(''),

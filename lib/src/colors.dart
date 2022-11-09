@@ -23,10 +23,12 @@ String Function(String text, MarkdownNode node) colorTagReplace([
   return (text, node) {
     final properties = node.tagProperties;
 
-    if (properties['background'] != null)
+    if (properties['background'] != null) {
       return backgroundColor != null
         ? backgroundColor(text)
         : text;
+    }
+    
     return color != null
       ? color(text)
       : text;
