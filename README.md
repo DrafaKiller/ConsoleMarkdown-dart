@@ -52,6 +52,8 @@ print(
 
 ## Markdown Cheatsheet
 
+### Symbols
+
 | Symbol | Property         | Example        | Result          |
 | ------ | ---------------- | -------------- | --------------- |
 | `**`   | bold             | `**text**`     | **text**        |
@@ -67,12 +69,16 @@ print(
 | `^^`   | inverse          | `^^text^^`     |                 |
 | \`     | dim              | \``text`\`     |                 |
 
+### Tags
+
 | Tag          | Property | Example                     |
 | ------------ | -------- | --------------------------- |
 | `<reset>`    | reset    | `<reset>text`               |
 | `<overline>` | overline | `<overline>text</overline>` |
 
 **Note:** All Symbol property names can be used as a tag.
+
+### Dynamic Tags
 
 | Dynamic Tag      | Property  | Example                      | Description |
 | ---------------- | --------- | ---------------------------- | ----------- |
