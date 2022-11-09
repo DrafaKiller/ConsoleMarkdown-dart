@@ -1,12 +1,11 @@
-## 0.0.2+2
+## 0.0.2+3 - 0.0.2+1
 
 Added:
 - Colors documentation
-
-## 0.0.2+1
-
-Added:
 - Separation between the Cheatsheet table, to make it easier to read
+
+Fixed:
+- Documentation
 
 ## 0.0.2
 
