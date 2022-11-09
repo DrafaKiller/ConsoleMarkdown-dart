@@ -76,6 +76,8 @@ print(
 | `<reset>`    | reset    | `<reset>text`               |
 | `<overline>` | overline | `<overline>text</overline>` |
 
+**Note:** All Symbol property names can be used as a tag.
+
 ### Colors
 
 The following colors are available as tags:
@@ -89,7 +91,7 @@ The following colors are available as tags:
 - `white`
 - `gray`
 
-**Note:** All Symbol property names can be used as a tag.
+Using the flag `background`, you can set the background color of the text.
 
 ### Dynamic Tags
 

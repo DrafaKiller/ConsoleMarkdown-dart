@@ -133,7 +133,9 @@ final ConsoleMarkdownBasic = Markdown.map({
 /// - `cyan`
 /// - `white`
 /// - `gray`
-
+/// 
+/// Using the flag `background`, you can set the background color of the text.
+/// 
 /// ### Dynamic Tags
 /// 
 /// | Dynamic Tag      | Property  | Example                      | Description |
