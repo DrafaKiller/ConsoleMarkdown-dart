@@ -76,6 +76,19 @@ print(
 | `<reset>`    | reset    | `<reset>text`               |
 | `<overline>` | overline | `<overline>text</overline>` |
 
+### Colors
+
+The following colors are available as tags:
+- `black`
+- `red`
+- `green`
+- `yellow`
+- `blue`
+- `magenta`
+- `cyan`
+- `white`
+- `gray`
+
 **Note:** All Symbol property names can be used as a tag.
 
 ### Dynamic Tags

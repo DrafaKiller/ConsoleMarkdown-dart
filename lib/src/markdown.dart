@@ -121,6 +121,19 @@ final ConsoleMarkdownBasic = Markdown.map({
 /// 
 /// **Note:** All Symbol property names can be used as a tag.
 /// 
+/// ### Colors
+/// 
+/// The following colors are available as tags:
+/// - `black`
+/// - `red`
+/// - `green`
+/// - `yellow`
+/// - `blue`
+/// - `magenta`
+/// - `cyan`
+/// - `white`
+/// - `gray`
+
 /// ### Dynamic Tags
 /// 
 /// | Dynamic Tag      | Property  | Example                      | Description |
