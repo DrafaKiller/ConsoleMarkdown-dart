@@ -2,7 +2,7 @@ import 'package:chalkdart/chalk.dart';
 import 'package:console_markdown/src/colors.dart';
 import 'package:marked/marked.dart';
 
-final ConsoleMarkdownBasicSymbols = Markdown.map({
+final ConsoleMarkdownSymbols = Markdown.map({
   // Formatting
   '[**]': (text, match) => chalk.bold(text),
   '[*]': (text, match) => chalk.italic(text),
@@ -83,6 +83,19 @@ final ConsoleMarkdown = Markdown.map({
     return applyDynamicColors(text, '#$color', match);
   },
 
+  r'<hex\(#?(?<color>[0-F]{3}(?:[0-F]{3})?)\) background>': (text, match) {
+    final properties = match.tagProperties;
+    final color = match.start.match.namedGroup('color');
+
+    if (color == null) {
+      if (match.strict) match.start.throwMissingToken();
+      return text;
+    }
+
+    if (properties['background'] != null)  return applyDynamicColors(text, '#$color', match, isBackground: true);
+    return applyDynamicColors(text, '#$color', match);
+  },
+
   r'<rgb\(\s*(?<color>[0-9]{1,3}\s*,\s*[0-9]{1,3}\s*,\s*[0-9]{1,3})\s*\) background>': (text, match) {
     final properties = match.tagProperties;
     final color = match.start.match.namedGroup('color');
@@ -96,6 +109,6 @@ final ConsoleMarkdown = Markdown.map({
     return applyDynamicColors(text, 'rgb($color)', match);
   },
 }, placeholders: {
-  ... ConsoleMarkdownBasicSymbols.placeholders,
+  ... ConsoleMarkdownSymbols.placeholders,
   ... ConsoleMarkdownBasic.placeholders,
 });
