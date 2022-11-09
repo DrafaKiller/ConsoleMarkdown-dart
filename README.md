@@ -52,44 +52,44 @@ print(
 
 ## Markdown Cheatsheet
 
-| Symbol                  | Property         | Example                         | Result                           |
-| ----------------------- | ---------------- | ------------------------------- | -------------------------------- |
-| <center>`**`</center>   | bold             | <center>`**text**`</center>     | <center>**text**</center>        |
-| <center>`*`</center>    | italic           | <center>`*text*`</center>       | <center>*text*</center>          |
-| <center>`__`</center>   | underline        | <center>`__text__`</center>     | <center><u>text</u></center>     |
-| <center>`~~`</center>   | strikethrough    | <center>`~~text~~`</center>     | <center>~~text~~</center>        |
-| <center>`^`</center>    | superscript      | <center>`^text^`</center>       | <center><sup>text</sup></center> |
-| <center>`~`</center>    | subscript        | <center>`~text~`</center>       | <center><sub>text</sub></center> |
-| <center>`___`</center>  | double-underline | <center>`___text___`</center>   |                                  |
-| <center>`!!`</center>   | blink            | <center>`!!text!!`</center>     |                                  |
-| <center>`!!!`</center>  | rapid-blink      | <center>`!!!text!!!`</center>   |                                  |
-| <center>`\|\|`</center> | hidden           | <center>`\|\|text\|\|`</center> |                                  |
-| <center>`^^`</center>   | inverse          | <center>`^^text^^`</center>     |                                  |
-| <center>\`</center>     | dim              | <center>\``text`\`</center>     |                                  |
+| Symbol | Property         | Example        | Result          |
+| ------ | ---------------- | -------------- | --------------- |
+| `**`   | bold             | `**text**`     | **text**        |
+| `*`    | italic           | `*text*`       | *text*          |
+| `__`   | underline        | `__text__`     | <u>text</u>     |
+| `~~`   | strikethrough    | `~~text~~`     | ~~text~~        |
+| `^`    | superscript      | `^text^`       | <sup>text</sup> |
+| `~`    | subscript        | `~text~`       | <sub>text</sub> |
+| `___`  | double-underline | `___text___`   |                 |
+| `!!`   | blink            | `!!text!!`     |                 |
+| `!!!`  | rapid-blink      | `!!!text!!!`   |                 |
+| `\|\|` | hidden           | `\|\|text\|\|` |                 |
+| `^^`   | inverse          | `^^text^^`     |                 |
+| \`     | dim              | \``text`\`     |                 |
 
-| Tag                           | Property | Example                                      |
-| ----------------------------- | -------- | -------------------------------------------- |
-| <center>`<reset>`</center>    | reset    | <center>`<reset>text`</center>               |
-| <center>`<overline>`</center> | overline | <center>`<overline>text</overline>`</center> |
+| Tag          | Property | Example                     |
+| ------------ | -------- | --------------------------- |
+| `<reset>`    | reset    | `<reset>text`               |
+| `<overline>` | overline | `<overline>text</overline>` |
 
 **Note:** All Symbol property names can be used as a tag.
 
-| Dynamic Tag                       | Property  | Example                                       | Description |
-| --------------------------------- | --------- | --------------------------------------------- | ----------- |
-| <center>`<console>`</center>      | console   | <center>`<console color="red" background="#000000" bold>text</console>`</center> | All property names above can be used as a tag property. |
-| <center>`<rgb(r, g, b)>`</center> | rgb       | <center>`<rgb(255, 0, 0)>text</rgb>`</center> | Can be set as a background by adding a `background` property. |
-| <center>`<hex([#]...)>`</center>  | hex       | <center>`<hex(#ff0000)>text</hex>`</center>   | Can be set as a background by adding a `background` property. |
-| <center>`<#...>`</center>         | short hex | <center>`<#ff0000>text</#>`</center>          | Can be set as a background by adding a `background` property. |
+| Dynamic Tag      | Property  | Example                      | Description |
+| ---------------- | --------- | ---------------------------- | ----------- |
+| `<console>`      | console   | `<console color="red" background="#000000" bold>text</console>` | All property names above can be used as a tag property. |
+| `<rgb(r, g, b)>` | rgb       | `<rgb(255, 0, 0)>text</rgb>` | Can be set as a background by adding a `background` property. |
+| `<hex([#]...)>`  | hex       | `<hex(#ff0000)>text</hex>`   | Can be set as a background by adding a `background` property. |
+| `<#...>`         | short hex | `<#ff0000>text</#>`          | Can be set as a background by adding a `background` property. |
 
 ## Markdown syntax alternatives
 
 If you're feeling paranoid about performance, you can use simpler versions of the markdown with only certain placeholders.
 
-| Markdown            | Description                   |
-| -------------------------- | ----------------------------- |
+| Markdown               | Description                   |
+| ---------------------- | ----------------------------- |
 | ConsoleMarkdownSymbols | Contains all symbols only.    |
-| ConsoleMarkdownBasic  | Contains only the console tag, which can be used to set any of the other properties. |
-| ConsoleMarkdown       | Contains all markdown syntax. |
+| ConsoleMarkdownBasic   | Contains only the console tag, which can be used to set any of the other properties. |
+| ConsoleMarkdown        | Contains all markdown syntax. |
 
 ## Example
 

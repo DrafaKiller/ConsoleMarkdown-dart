@@ -1,6 +1,6 @@
 name: console_markdown
 description: A console markdown for formatting and color, using chalk as a dependency. No setup required, quick and easy to use.
-version: 0.0.1
+version: 0.0.2
 repository: https://github.com/DrafaKiller/ConsoleMarkdown-dart
 issue_tracker: https://github.com/DrafaKiller/ConsoleMarkdown-dart/issues
 
