@@ -114,10 +114,18 @@ final ConsoleMarkdownBasic = Markdown.map({
 /// 
 /// ### Tags
 /// 
-/// | Tag          | Property | Example                     |
-/// | ------------ | -------- | --------------------------- |
-/// | `<reset>`    | reset    | `<reset>text`               |
-/// | `<overline>` | overline | `<overline>text</overline>` |
+/// | Tag          | Property         | Example                     |
+/// | ------------ | --------         | --------------------------- |
+/// | `<reset>`    | reset            | `<reset>text`               |
+/// | `<overline>` | overline         | `<overline>text</overline>` |
+/// | `<br>`       | line break       | `<br>`                      |
+/// | `<b>`        | bold             | `<b>text</b>`               |
+/// | `<i>`        | italic           | `<i>text</i>`               |
+/// | `<u>`        | underline        | `<u>text</u>`               |
+/// | `<uu>`       | double-underline | `<uu>text</uu>`             |
+/// | `<s>`        | strikethrough    | `<s>text</s>`               |
+/// | `<sup>`      | superscript      | `<sup>text</sup>`           |
+/// | `<sub>`      | subscript        | `<sub>text</sub>`           |
 /// 
 /// **Note:** All Symbol property names can be used as a tag.
 /// 
@@ -147,7 +155,6 @@ final ConsoleMarkdownBasic = Markdown.map({
 // ignore: non_constant_identifier_names
 final ConsoleMarkdown = Markdown.map({
   // Tags
-  'basic: <reset>': (text, match) => chalk.reset(''),
   '<blink>': (text, match) => chalk.blink(text),
   '<rapid-blink>': (text, match) => chalk.rapidblink(text),
   '<bold>': (text, match) => chalk.bold(text),
@@ -161,6 +168,19 @@ final ConsoleMarkdown = Markdown.map({
   '<superscript>': (text, match) => chalk.superscript(text),
   '<subscript>': (text, match) => chalk.subscript(text),
   '<strikethrough>': (text, match) => chalk.strikethrough(text),
+
+  // Short Tags
+  '<b>': (text, match) => chalk.bold(text),
+  '<i>': (text, match) => chalk.italic(text),
+  '<u>': (text, match) => chalk.underline(text),
+  '<uu>': (text, match) => chalk.doubleunderline(text),
+  '<s>': (text, match) => chalk.strikethrough(text),
+  '<sup>': (text, match) => chalk.superscript(text),
+  '<sub>': (text, match) => chalk.subscript(text),
+
+  // Basic Tags
+  'basic: <reset>': (text, match) => chalk.reset(''),
+  'basic: <br>': (text, match) => '\n',
 
   // Colors
   for (final color in chalkColors.entries)

@@ -70,11 +70,19 @@ print(
 | \`     | dim              | \`text\`       |                 |
 
 ### Tags
-
-| Tag          | Property | Example                     |
-| ------------ | -------- | --------------------------- |
-| `<reset>`    | reset    | `<reset>text`               |
-| `<overline>` | overline | `<overline>text</overline>` |
+  
+| Tag          | Property         | Example                     |
+| ------------ | --------         | --------------------------- |
+| `<reset>`    | reset            | `<reset>text`               |
+| `<overline>` | overline         | `<overline>text</overline>` |
+| `<br>`       | line break       | `<br>`                      |
+| `<b>`        | bold             | `<b>text</b>`               |
+| `<i>`        | italic           | `<i>text</i>`               |
+| `<u>`        | underline        | `<u>text</u>`               |
+| `<uu>`       | double-underline | `<uu>text</uu>`             |
+| `<s>`        | strikethrough    | `<s>text</s>`               |
+| `<sup>`      | superscript      | `<sup>text</sup>`           |
+| `<sub>`      | subscript        | `<sub>text</sub>`           |
 
 **Note:** All Symbol property names can be used as a tag.
 

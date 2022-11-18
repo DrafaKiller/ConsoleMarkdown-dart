@@ -1,11 +1,8 @@
-## 0.0.2+3 - 0.0.2+1
+## 0.0.3
 
 Added:
-- Colors documentation
-- Separation between the Cheatsheet table, to make it easier to read
-
-Fixed:
-- Documentation
+- Short Tags, like `<b> </b>` for bold, `<i> </i>` for italic, ... and others
+- New Line tag, HTML-like `<br>`
 
 ## 0.0.2
 
