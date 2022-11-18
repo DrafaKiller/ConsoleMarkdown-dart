@@ -13,7 +13,7 @@ and [chalkdart](https://pub.dev/packages/chalkdart) for the console styling.
 * No setup required
 * Symbol markdown syntax
 * Tags markdown, HTML-like syntax
-* Strict markdown syntax option, to avoid mistakes
+* Optional strict markdown syntax, to avoid mistakes
 
 ## Getting started
 
@@ -67,7 +67,7 @@ print(
 | `!!!`  | rapid-blink      | `!!!text!!!`   |                 |
 | `\|\|` | hidden           | `\|\|text\|\|` |                 |
 | `^^`   | inverse          | `^^text^^`     |                 |
-| \`     | dim              | \``text`\`     |                 |
+| \`     | dim              | \`text\`       |                 |
 
 ### Tags
 
