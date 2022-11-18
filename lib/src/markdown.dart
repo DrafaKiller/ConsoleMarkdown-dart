@@ -116,9 +116,6 @@ final ConsoleMarkdownBasic = Markdown.map({
 /// 
 /// | Tag          | Property         | Example                     |
 /// | ------------ | --------         | --------------------------- |
-/// | `<reset>`    | reset            | `<reset>text`               |
-/// | `<overline>` | overline         | `<overline>text</overline>` |
-/// | `<br>`       | line break       | `<br>`                      |
 /// | `<b>`        | bold             | `<b>text</b>`               |
 /// | `<i>`        | italic           | `<i>text</i>`               |
 /// | `<u>`        | underline        | `<u>text</u>`               |
@@ -126,7 +123,10 @@ final ConsoleMarkdownBasic = Markdown.map({
 /// | `<s>`        | strikethrough    | `<s>text</s>`               |
 /// | `<sup>`      | superscript      | `<sup>text</sup>`           |
 /// | `<sub>`      | subscript        | `<sub>text</sub>`           |
-/// 
+/// | `<br>`       | line break       | `<br>`                      |
+/// | `<reset>`    | reset            | `<reset>text`               |
+/// | `<overline>` | overline         | `<overline>text</overline>` |
+///
 /// **Note:** All Symbol property names can be used as a tag.
 /// 
 /// ### Colors
